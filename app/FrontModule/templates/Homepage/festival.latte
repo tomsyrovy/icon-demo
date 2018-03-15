@@ -1,0 +1,59 @@
+{block title}Festival - {include #parent}{/block}
+{block description}iCONfestival iCON Prague 2015{/block}
+{block bodyClass}predprogram{/block}
+
+
+{block header}
+	<h1 class="page-title">
+		<a title="Přejít na úvodní stranu" n:href="Homepage:default">
+			<img src="{$basePath}/assets/images/logo.png" alt="iCON"></a>festival
+	</h1>
+{/block}
+
+
+{block content}
+
+	<div class="container">
+
+		<div class="row">
+			<div class="col-10 col-offset-1 col-block">
+				<h3 class="block-heading-3 heading-green">iCONfestival</h3>
+			</div> <!-- .col-12 -->
+		</div> <!-- .row -->
+
+		<div class="row">
+			<div class="col-12 col-block">
+				<a class="button button-black button-inline button-program" style="margin-top: 0;" title="Detailní program" n:href="Homepage:program#iconfestival">Detailní program</a>
+			</div>
+		</div>
+
+		{foreach $articles as $a}
+			<div class="row">
+				<div class="col-10 col-offset-1 col-block">
+					{if $a->title}
+						<h4 class="block-heading-4">{if $a->link}<a href="{$a->link}" target="_blank">{$a->title}</a>{else}{$a->title}{/if}</h4>
+					{/if}
+
+					{if $a->has_image == 1}
+						<div class="article_theme">
+							<img src="{$basePath}/assets/images/upload/{$a->source}" alt="{$a->caption}" />
+						</div> <!-- .theme -->
+					{/if}
+
+					<div class="article_content{if $a->has_image == 0} no_theme{/if}">
+						{!$a->content}
+					</div> <!-- .article_content -->
+
+					<div class="clear-both"></div>
+
+				</div> <!-- .col-12 -->
+			</div> <!-- .row -->
+		{/foreach}
+
+	</div> <!-- .container -->
+
+{/block}
+
+
+{block footer_2013}{/block}
+{*{block footer_partners}{/block}*}

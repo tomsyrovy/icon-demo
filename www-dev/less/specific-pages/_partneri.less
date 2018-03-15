@@ -1,0 +1,135 @@
+/**
+ * Partneři
+ */
+
+
+.partneri {
+	.container-main {
+		margin-top: 60px;
+	}
+
+	.partner-group {
+		margin: 50px 0 100px;
+
+		.partner-list {
+			margin: 30px 0 0;
+			padding: 0;
+			list-style-type: none;
+			text-align: center;
+			
+			li {
+				margin: 0 20px;
+				padding: 0;
+				display: inline-block;
+				vertical-align: middle;
+				position: relative;
+			}
+
+			a {
+				display: table-cell;
+				vertical-align: middle;
+				text-align: center;
+				width: 250px;
+				height: 140px;
+				position: relative;
+				text-decoration: none;
+
+				&:hover p {
+					display: block;
+				}
+			}
+
+			img {
+				opacity: 0;
+				transition: opacity .3s ease-in;
+			}
+
+			p {
+				display: none;
+				margin: 0;
+				padding: 0; 
+				width: 250px;
+				height: 140px;
+				position: absolute;
+				left: 0;
+				top: 0;
+				text-align: center;
+				background: #fff;
+				
+				span {
+					display: table-cell;
+					vertical-align: middle;
+					width: 250px;
+					height: 140px;
+				}
+			}
+		}
+
+		.partner-list-5 {
+			li {
+				margin: 0 16px; // Marginem lze ovlivňovat počet sloupců
+			}
+
+			a {
+				width: 150px;
+			}
+
+			img {
+				max-width: 150px;
+			}
+
+			p {
+				width: 150px;
+
+				span {
+					width: 150px;
+				}
+			}
+		}
+	}
+
+	.partner-group-heading {
+		color: @green;
+		//font-size: 25px;
+		margin: 0;
+		padding: 0;
+		text-align: center;
+		
+		.color-box {
+		    display: inline-block;
+		    width: 25px;
+		    height: 25px;
+		    vertical-align: middle;
+		    position: relative;
+		    top: -5px;
+		    margin-right: 10px;
+		    background: @green;
+		    .border-radius(4px);
+		    -webkit-transform: rotate(30deg);
+		    -moz-transform: rotate(30deg);
+		    -ms-transform: rotate(30deg);
+		    -o-transform: rotate(30deg);
+		    transform: rotate(30deg);
+		    
+		    span {
+		    	display: block;
+		    	position: absolute;
+		    	left: 8px;
+		    	bottom: 8px;
+		    	
+		    	width: 0; 
+		    	height: 0; 
+		    	border-left: 5px solid transparent;
+		    	border-right: 5px solid transparent;
+		    	
+		    	border-top: 7px solid #fff;
+		    	
+		    	-webkit-transform: rotate(-30deg);
+		    	-moz-transform: rotate(-30deg);
+		    	-ms-transform: rotate(-30deg);
+		    	-o-transform: rotate(-30deg);
+		    	transform: rotate(-30deg);
+		    }
+		}
+	}
+}

@@ -1,0 +1,89 @@
+{block title}Program - {include #parent}{/block}
+{block description}Program konference iCON Prague 2015{/block}
+{block bodyClass}predprogram{/block}
+
+
+{block header}
+	<h1 class="page-title">
+		<a title="Přejít na úvodní stranu" n:href="Homepage:default">
+			<img src="{$basePath}/assets/images/logo.png" alt="iCON"></a> Konference
+	</h1>
+{/block}
+
+
+{block content}
+
+	<div class="container">
+		<div class="row">
+			<div class="col-10 col-offset-1 col-block">
+
+				<p>Od pátku do neděle probíhají také speciální konference.</p>
+				<p>V sobotu celý den <a href="#iconference" class="heading-cyan">iCONference</a> zaměřená na Life Hacking s trendy, technikami a inspirativními příběhy.</p>
+				<p>V sobotu a v neděli probíhá také <a href="#icontrenink" class="heading-yellow">iCON Trénink</a>. Každá z oblastí jako Skečnouting nebo Evernote se rozebírá krok za krokem s tím nejlepším lektorů z nejlepších.</p>
+				<p>Pro programátory a projekťáky v IT, kteří se zajímají o iOS a nejnovější trendy jako je internet věcí je tu v pátek <a href="#icondev" class="heading-chilli">iCON Dev</a>.
+
+				<p>Nechcete o nic přijít?</p>
+				<p>Pro iCONadšence jsme připravili několik</p>
+				<h1 class="heading-green">VIP Open Passů</h1>
+				<p><strong>VIP Open Pass = neomezený vstup na cokoli z konferencí, bez registrace.</strong></p>
+
+				{!$ticketsLink}
+
+				{*<p>iCON Prague je největší česká akce pro všechny příznivce zařízení a softwarových řešení značky Apple. Je to festival pro tech-pozitivní lidi a v neposlední řadě také shopping Mecca s inovativními produkty.</p>*}
+			</div> <!-- .col-12 -->
+		</div> <!-- .row -->
+
+		{foreach $talkTypes as $t}
+			{if ($t->headline_title AND $t->headline_description)}
+
+				<div class="row" id="{$t->nice_url}">
+					<div class="col-12 col-block">
+						<h3 class="block-heading-3 heading-{$t->color}">{$t->headline_title}</h3>
+
+						{*{if $t->id == 12}*}
+
+							{*<p><strong>Přesný program pro vás ještě připravujeme. Pokud chcete být informováni jako první, přihlaste se k odběru <a title="Přejít na kontakt" n:href="Homepage:kontakt">newsletteru</a>.</strong></p>*}
+
+							{*<p><a class="button button-yellow button-inline" title="Přejít na kontakt" n:href="Homepage:kontakt">Odebírat newsletter</a></p>*}
+
+						{*{/if}*}
+
+
+						<p>{!$t->headline_description}</p>
+
+						{!$ticketsLink}
+
+						<?php
+                        	if(in_array($t->id, $iCONtypeShow)){
+						?>
+						<a class="button button-black button-inline button-program" title="Detailní program" n:href="Homepage:program#{$t->class}">Detailní program</a>
+						<?php
+                        	}
+                    	?>
+						<div class="clear-both"></div>
+
+						{foreach $headliners[$t->id] as $h}
+							<article class="col-3 headliner">
+								<a n:href="Homepage:recnici, $h->nice_url" title="{$h->firstname} {$h->lastname}" class="headliner-link">
+									<img class="headliner-image" src="{$basePath}/assets/images/speakers/{$h->image}" alt="{$h->firstname} {$h->lastname}">
+									<h1 class="headliner-name">{$h->firstname} {$h->lastname}</h1>
+									<h2 class="headliner-company">{$h->company}</h2>
+								</a>
+								{!$h->headliner_info}
+							</article> <!-- .headliner -->
+
+							{if $h->break == 1}<div class="clear-both"></div>{/if}
+							{last}<div class="clear-both"></div>{/last}
+						{/foreach}
+
+					</div> <!-- .col-12 -->
+				</div> <!-- .row -->
+
+			{/if}
+		{/foreach}
+
+{/block}
+
+
+{block footer_2013}{/block}
+{*{block footer_partners}{/block}*}

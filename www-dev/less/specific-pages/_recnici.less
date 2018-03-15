@@ -1,0 +1,237 @@
+/**
+ * Řečníci
+ */
+
+
+.recnici {
+	.container-main {
+		margin-top: 60px;
+	}
+
+	.col-left {
+		border-right: 1px solid @green;
+		padding-left: 68px;
+
+		ul {
+			list-style-type: none;
+		}
+
+		li {
+			margin: 5px 0;
+		}
+
+		a {
+			text-decoration: none;
+			color: #333;
+
+			&:hover {
+				color: #000;
+				font-weight: bold;
+			}
+		}
+
+		.active {
+			a {
+				color: #000;
+				font-weight: bold;
+			}
+		}
+	}
+
+	.col-right {
+		padding-left: 40px;
+	}
+
+	.speaker-bio {
+
+	}
+
+	.speaker-name {
+		margin: 0;
+		padding: 0;
+		color: @green;
+		font-size: 34px;
+		line-height: normal;
+		font-weight: normal;
+	}
+
+	.speaker-company {
+		margin: 20px 0;
+		padding: 0;
+		font-weight: bold;
+		font-size: 16px;
+	}
+
+	.speaker-social {
+		text-align: center;
+
+		a {
+			text-decoration: none;
+		}
+
+		.fa {
+			color: #fff;
+			padding: 8px 5px;
+			.border-radius(5px);
+			.transition(.2s); 
+
+			&:hover {
+				.transform(1.1);
+				.transition(.2s);
+			}
+		}
+
+		.fa-facebook {
+			background: #3460a1;
+		}
+
+		.fa-twitter {
+			background: #28aae1;
+		}
+	
+		.fa-linkedin {
+			background: #136d9d;
+		}
+
+		.fa-instagram {
+			background: #9f6f59;
+		}
+
+		.fa-globe {
+			background: @yellow;
+		}
+	}
+
+	.speaker-photo {
+		margin-bottom: 30px;
+		max-width: 100%;
+	}
+
+	.speaker-shows {
+
+	}
+
+	.speaker-show {
+		margin: 20px 0 40px;
+
+		ul {
+			list-style-type: none;
+		}
+
+		li {}
+
+		.start-time {
+			display: inline-block;
+		}
+
+		.time-separator {
+			display: inline-block;
+			text-align: center;
+			margin: 0 20px;
+		}
+
+		.end-time {
+			display: inline-block;
+			width: 50px;
+			text-align: left;
+		}
+	}
+
+	.speaker-show-date {
+		margin: 50px 0 0;
+		padding: 0;
+		border-bottom: 1px solid #ccc;
+		font-weight: normal;
+		font-size: inherit;
+	}
+
+	.speaker-show-heading {
+		margin: 0 0 15px;
+		padding: 0;
+		font-weight: normal;
+		font-size: 25px;
+
+		a {
+			text-decoration: none;
+		}
+		
+		&.green,
+		&.green a {
+			color: @green;
+		}
+		
+		&.cyan,
+		&.cyan a {
+			color: @cyan;
+		}
+		
+		&.pink,
+		&.pink a {
+			color: @pink;
+		}
+		
+		&.yellow,
+		&.yellow a {
+			color: @yellow;
+		}
+		
+		&.chilli,
+		&.chilli a {
+			color: @chilli;
+		}
+	}
+}
+
+
+
+
+
+@media only screen and (max-width: @screen-lg) {
+	.recnici {
+		.col-left {
+			padding-left: @grid-gutter;
+		}
+
+		.col-time {
+			margin-bottom: 0;
+		}
+	}
+}
+
+
+
+
+
+@media only screen and (max-width: @screen-md) {
+	.recnici {
+		.col-left {
+			border: 0;
+			text-align: center;
+
+			li {
+				display: inline-block;
+				margin: 0 10px 10px;
+			}
+		}
+
+		.col-right {
+			padding-left: @grid-gutter;
+			margin-top: 60px;
+		}
+
+		.speaker-name,
+		.speaker-company {
+			text-align: center;
+		}
+
+		.col-time {
+			float: left;
+			width: 50%;
+		}
+
+		.col-talk {
+			float: right;
+			width: 50%;
+		}
+	}
+}

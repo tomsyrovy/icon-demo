@@ -1,0 +1,238 @@
+/**
+ * Program
+ */
+
+
+.program {
+	.container-block {
+		margin-top: 60px;
+	}
+
+	.col-right {
+		padding-top: 100px;
+	}
+
+	.block-date {
+		width: 140px;
+		height: 140px;
+		background: @green;
+		.border-radius(10px);
+		position: relative;
+		color: #fff;
+		font-size: 26px;
+		font-family: HeliaCore-Black, Arial, sans-serif;
+		line-height: 25px;
+		
+		-webkit-transform: rotate(30deg);
+		-moz-transform: rotate(30deg);
+		-ms-transform: rotate(30deg);
+		-o-transform: rotate(30deg);
+		transform: rotate(30deg);
+	}
+
+	.block-date-content {
+		position: absolute;
+		left: 0;
+		top: 20px;
+		margin: 0;
+		padding: 0;
+		
+		-webkit-transform: rotate(-30deg);
+		-moz-transform: rotate(-30deg);
+		-ms-transform: rotate(-30deg);
+		-o-transform: rotate(-30deg);
+		transform: rotate(-30deg);
+	}
+
+	.block-date-day {
+		font-size: 16px;
+		margin-left: 20px;
+		font-family: HeliaCore-Light, sans-serif;
+	}
+
+	.block-title {
+		color: @green;
+		font-size: 42px;
+		line-height: 40px;
+		margin: 50px 0 20px;
+	}
+
+	.tickets-link {
+		margin: 40px 0 80px;
+	}
+
+	.seminars-group-date {
+		font-size: 40px;
+		color: @green;
+		font-family: HeliaCore-Black, Arial, sans-serif;
+		margin-left: 100px;
+		margin-bottom: 100px;
+	}
+
+	.seminar {
+		position: relative;
+		padding: 0 0 50px 20px;
+		border-left: 1px solid @green;
+		margin-left: 100px;
+
+		&:last-of-type,
+		&.last {
+			border: 0;
+		}
+	}
+
+	.seminar-time {
+		font-size: 25px;
+		font-weight: bold;
+		color: @green;
+		text-align: right;
+		padding-right: 20px;
+		position: absolute;
+		width: 100px;
+		left: -121px;
+		top: 0;
+	}
+
+	.seminar-time-digits {
+		position: relative;
+		top: -5px;
+	}
+
+	.seminar-time-dot {
+		width: 7px;
+		height: 7px;
+		position: absolute;
+		right: -4px;
+		top: 0;
+		background: @green;
+		.border-radius(50%);
+	}
+
+	.seminar-content {
+		position: relative;
+		top: -30px;
+	}
+
+	.seminar-avatar {
+		img {
+			width: 70px;
+		}
+	}
+
+	.seminar-speaker {
+		font-size: 25px;
+		color: @green;
+		font-weight: bold;
+		line-height: 30px;
+		margin-bottom: 8px;
+
+		a {
+			text-decoration: none;
+			color: inherit;
+		}
+	}
+
+	.seminar-title {
+		font-size: 25px;
+		font-weight: bold;
+		line-height: 30px;
+	}
+
+	.seminar-more {
+		text-decoration: underline;
+		cursor: pointer;
+	}
+
+	.ticket {
+	  	margin-top: 8px;
+	  	color: @pink;
+	  	text-decoration: none;
+	  	font-weight: bold;
+	  	display: block;
+	}
+  	.ticket:hover {
+	  text-decoration: underline;
+	}
+
+	.seminar-more-info {
+		display: none;
+	}
+}
+
+
+
+
+
+@media only screen and (max-width: @screen-md) {
+	.program {
+		.block-date {
+			margin: 0 auto;
+		}
+
+		.block-title,
+		.tickets-link {
+			text-align: center;
+		}
+
+		.seminars-group-date {
+			margin-left: 0;
+			text-align: center;
+		} 
+	}
+}
+
+
+#iconference {
+  .block-date,
+  .seminar-time-dot {
+	background: @cyan;
+  }
+
+  .seminar {
+	border-color: @cyan;
+  }
+
+  .block-title,
+  .seminars-group-date,
+  .seminar-time-digits,
+  .seminar-speaker {
+	color: @cyan;
+  }
+}
+
+
+#icontrenink {
+	.block-date,
+	.seminar-time-dot {
+		background: @yellow;
+	}
+
+	.seminar {
+		border-color: @yellow;
+	}
+
+	.block-title,
+	.seminars-group-date,
+	.seminar-time-digits,
+	.seminar-speaker {
+		color: @yellow;
+	}
+}
+
+#icondev {
+	.block-date,
+	.seminar-time-dot {
+		background: @chilli;
+	}
+
+	.seminar {
+		border-color: @chilli;
+	}
+
+	.block-title,
+	.seminars-group-date,
+	.seminar-time-digits,
+	.seminar-speaker {
+		color: @chilli;
+	}
+}

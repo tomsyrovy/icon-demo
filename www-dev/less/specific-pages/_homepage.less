@@ -1,0 +1,124 @@
+/**
+ * Homepage
+ */
+
+
+.homepage {
+	.header {
+		position: relative;
+		margin-top: 20px;
+	}
+
+	.header-claim {
+		text-align: center;
+		margin-bottom: 40px;
+		padding: 5px 10px 0;
+		border-right: 1px solid #8b8b8b;
+		border-left: 1px solid #8b8b8b;
+	}
+
+	.header-claim-heading {
+		font-size: 20px;
+		letter-spacing: 5px;
+		line-height: 120%;
+		text-transform: uppercase;
+		color: #8b8b8b;
+	}
+
+	.container-main {
+		//padding-top: 50px;
+		margin-top: 40px;
+	}
+}
+
+.homepage-info-buttons {
+	.col-inner {
+		padding-top: 20px;
+		border-top: 1px solid #999;
+	}
+
+	.col-green {
+		border-color: @green;
+	}
+
+	.col-cyan {
+		border-color: @cyan;
+	}
+
+	.col-pink {
+		border-color: @pink;
+	}
+
+	.button {
+		float: left;
+		text-align: left;
+	}
+}
+
+@media only screen and (max-width: @screen-md) {
+	.homepage-info-buttons {
+		.button {
+			display: block;
+			float: none;
+			text-align: center;
+
+			br {
+				display: none;
+			}
+		}
+	}
+}
+
+.homepage-about {
+//	margin-top: 25px;
+
+  	border-top: 1px solid #999;
+
+	.homepage-about-heading {
+		margin: 50px 0 20px 0;
+		padding: 0 0 0 30px;
+		font-size: 28px;
+		line-height: 40px;
+		font-family: HeliaCore-Bold, Arial, sans-serif;
+		background: url(../../../assets/images/icon.png) left 6px no-repeat;
+		background-size: 20px 21px;
+
+	  	a {
+		  text-decoration: none;
+		}
+
+	}
+
+	ul {
+		margin-left: 40px;
+	}
+}
+
+.homepage-icon-social {
+	margin-top: 50px;
+	padding-top: 50px;
+	border-top: 1px solid #ccc;
+
+	.icon-social-heading {
+		font-size: 22px;
+		margin-bottom: 20px;
+
+		strong {
+			font-family: HeliaCore-Bold, Arial, sans-serif;
+		}
+	}
+
+	.social-icon {
+		width: 64px;
+		display: table-cell;
+		vertical-align: top;
+	}
+
+	.social-description {
+		display: table-cell;
+		vertical-align: middle;
+		padding-left: 10px;
+		font-size: 13px;
+		line-height: 120%;
+	}
+}

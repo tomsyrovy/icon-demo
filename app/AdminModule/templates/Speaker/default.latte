@@ -1,0 +1,51 @@
+{block pageTitle}Administrace řečníků{/block}
+
+{block content}
+	
+	<div class="container">
+		<div class="row">
+			<div class="col-4">
+				{if $speaker}
+					{if $speaker->image}
+						<img class='speaker_img' src='{$basePath}/assets/images/speakers/{$speaker->image}'>
+					{/if}
+				{/if}
+				{if $speaker}
+					{if $speaker->image_small}
+						<img class='speaker_img_small' src='{$basePath}/assets/images/speakers/{$speaker->image_small}'>
+					{/if}
+				{/if}
+				<table class='list' n:inner-foreach="$speakers as $speaker">
+					{first}
+						<tr>
+							<td colspan='3'>
+								<a class='create' n:href='Speaker:default'>Nový řečník</a>
+							</td>
+						</tr>
+					{/first}
+					<tr>
+						<td>
+							<a class='icon visible{if !$speaker->active} false{/if}' n:href="changeStatus! 'speaker', 'active', $speaker->id"></a>
+						</td>
+						<td>
+							<a class='icon in-list{if !$speaker->in_list} false{/if}' n:href="changeStatus! 'speaker', 'in_list', $speaker->id"></a>
+						</td>
+						<td>
+							<a{if $speaker_id == $speaker->id} class='current'{/if} n:href="Speaker:default $speaker->id">{$speaker->firstname} {$speaker->lastname}<a/>
+						</td>
+					</tr>
+				</table>
+				
+				<script type="text/javascript">
+					$('form table tr').each(function(){
+						$(this).attr('id', $(this).find('input, select, textarea').attr('name'));
+					});
+				</script>
+			</div> <!-- .col-4 -->
+
+			<div class="col-8">
+				{control formSpeaker}
+			</div> <!-- .col-8 -->
+		</div> <!-- .row -->
+	</div> <!-- .container -->
+{/block}

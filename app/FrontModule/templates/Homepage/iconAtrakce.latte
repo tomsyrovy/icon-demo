@@ -1,0 +1,33 @@
+{block title}iCONatrakce - {include #parent}{/block}
+{block description}Jediná česká konference pro všechny příznivce zařízení a softwarových řešení společnosti Apple{/block}
+{block body_id}iconatrakce{/block}
+
+
+{block header}
+	<h1 id="page_title"><a title="Přejít na úvodní stranu" n:href="Homepage:default"><img src="{$basePath}/assets/images/logo.png" data-src2x="{$basePath}/assets/images/logo@2x.png" alt="iCON"></a> iCONatrakce</h1>
+{/block}
+
+
+{block content}
+
+	{foreach $articles as $a}
+		<article id="{$a->nice_url}">
+			<h1>{if $a->link}<a href="{$a->link}" target="_blank">{$a->title}</a>{else}{$a->title}{/if}</h1>
+
+			{if $a->has_image == 1}
+			<div class="article_theme">
+				<img src="{$basePath}/assets/images/upload/{$a->source}" alt="{$a->caption}" />
+			</div> <!-- .theme -->
+			{/if}
+
+			<div class="article_content{if $a->has_image == 0} no_theme{/if}">
+				{!$a->content}
+			</div> <!-- .article_content -->
+
+			<div class="clear-both"></div>
+		</article>
+	{/foreach}
+
+{/block}
+
+{block footer_2013}{/block}

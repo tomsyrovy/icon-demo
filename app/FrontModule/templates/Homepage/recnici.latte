@@ -1,0 +1,125 @@
+{block title}Řečníci - {include #parent}{/block}
+{block description}Jediná česká konference pro všechny příznivce zařízení a softwarových řešení společnosti Apple{/block}
+{block bodyClass}recnici{/block}
+
+
+{block header}
+	<h1 class="page-title">
+		<a title="Přejít na úvodní stranu" n:href="Homepage:default">
+			<img src="{$basePath}/assets/images/logo.png" alt="iCON"></a> Řečníci
+	</h1>
+{/block}
+
+
+
+
+
+{block content}
+	<div class="col-3 col-left">
+		<ul n:inner-foreach="$speakers as $s">
+			<li{if $s->nice_url == $nice_url} class="active"{/if}>
+				<a n:href="Homepage:recnici $s->nice_url"
+				   title="{$s->firstname} {$s->lastname}">{$s->firstname} {$s->lastname}</a>
+			</li>
+		</ul>
+	</div> <!-- .col-3 -->
+
+
+	<div class="col-9 col-right">
+
+		<div class="row">
+			<div class="col-8">
+				<div class="speaker-bio">
+					<h1 class="speaker-name">{$speaker->firstname} {$speaker->lastname}</h1>
+
+					<h2 class="speaker-company">{$speaker->company} <?php if(!empty($speaker->company) AND !empty($speaker->position)) {echo "/";}
+						?> {$speaker->position}</h2>
+
+					{!$speaker->description}
+
+				</div> <!-- .speaker-bio -->
+			</div> <!-- .col-8 -->
+
+
+			<div class="col-4">
+				<div class="speaker-social">
+					{if $speaker->image}
+						<img class="speaker-photo" src="{$basePath}/assets/images/speakers/{$speaker->image}" alt="{$speaker->firstname} {$speaker->lastname}">
+					{/if}
+					<p n:inner-foreach="$socials as $soc">
+						<a title="{$soc->type}" href="{$soc->link}" target="_blank">
+							<i class="{$soc->class} fa-fw"></i>
+						</a>
+					</p>
+				</div>
+				<!-- .speaker-social -->
+			</div> <!-- .col-4 -->
+		</div> <!-- .row -->
+		
+
+		<div class="speaker-shows">
+			<div class="row">
+				<div class="col-8">
+					{var $date = ""}
+					{var $talk_type = ""}
+					{foreach $talks as $t}
+						{first}
+						{if $date != $t->date}
+							<h3 class="speaker-show-date">{$t->date|striptags}</h3>
+							{var $date = $t->date}
+						{/if}
+							<article class="speaker-show">
+								<h4 class="speaker-show-heading {$t->color}"><a n:href="Homepage:program#$t->class">{$t->talk_type_title}</a></h4>
+								
+								<ul>
+									{var $talk_type = $t->talk_type_title}
+						{/first}
+									{if $talk_type != $t->talk_type_title}
+								</ul>
+							</article> <!-- .speaker-show -->
+
+							{if $date != $t->date}
+								<h3>{$t->date|striptags}</h3>
+								{var $date = $t->date}
+							{/if}
+							
+							<article class="speaker-show">
+								<h4 class="speaker-show-heading {$t->color}"><a n:href="Homepage:program#$t->class">{$t->talk_type_title}</a></h4>
+								
+								<ul>
+							{var $talk_type = $t->talk_type_title}
+						{/if}
+						{capture $hash}{$t->talk_title|webalize}{/capture}
+							<li>
+								<div class="row">
+									<div class="col-5 col-time">
+										<span class="start-time">{$t->starttime|date:"H:i"}</span>
+										<span class="time-separator">–</span>
+										<span class="end-time">{$t->endtime|date:"H:i"}</span>
+									</div> <!-- .col-6 -->
+
+									<div class="col-7 col-talk">
+										<a href="{link "Homepage:program#$hash"}">{$t->talk_title}</a>
+									</div> <!-- .col-6 -->
+								</div> <!-- .row -->
+							</li>
+						{last}
+							</ul>
+							</article> <!-- .speaker-show -->
+						{/last}
+					{/foreach}
+
+					{!$ticketsLink}
+				</div> <!-- .col-5 -->
+			</div> <!-- .row -->
+		</div> <!-- .speaker-show -->
+
+
+	</div> <!-- .col-9 -->
+{/block}
+
+
+
+
+{block footer_partners}{/block}
+{block footer_2013}{/block}

@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<!--[if IE 7]><html class="ie7" lang="cs"><![endif]-->
+<!--[if IE 8]><html class="ie8" lang="cs"><![endif]-->
+<!--[if gt IE 8]><!--><html lang="cs"><!--<![endif]-->
+	<head>
+	
+		<!-- ========== Meta ========== -->
+		<meta charset="utf-8">
+		<meta name="description" content="{block description}{/block}">
+		{*<meta name="author" content="Jan Řihák, http://www.eternia.cz, Jiří Šebek, Tomáš Syrový, http://www.query.cz">*}
+		<meta name="keywords" content="icon, prague, apple, konference">
+		<meta name="robots" content="index,follow">
+		<meta name="googlebot" content="snippet,archive">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		{* <meta name="apple-itunes-app" content="app-id=598933386"> *}
+	
+	
+		<title>{block title}iCON Prague 2015{/block}</title>
+
+
+		<!-- ========== Ico ========== -->
+		<link rel="shortcut icon" href="{$basePath}/favicon.ico">
+		<link rel="apple-touch-icon-precomposed" href="{$basePath}/apple-touch-icon-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="{$basePath}/apple-touch-icon-72x72-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" sizes="76x76" href="{$basePath}/apple-touch-icon-76x76-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="{$basePath}/apple-touch-icon-114x114-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" sizes="120x120" href="{$basePath}/apple-touch-icon-120x120-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="{$basePath}/apple-touch-icon-144x144-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" sizes="152x152" href="{$basePath}/apple-touch-icon-152x152-precomposed.png">
+
+
+		<!-- ========== CSS ========== -->
+		<link rel="stylesheet" href="{$basePath}/assets/css/style.min.css?0d73349a" type="text/css" media="screen,projection">
+		
+
+		<!-- ========== JS ========== -->
+		<!--[if lt IE 9]><script type="text/javascript" src="{$basePath}/assets/js/html5shiv.js"></script><![endif]-->
+
+
+		<!-- ========== GA ========== -->
+		<script n:syntax="off">
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			ga('create', 'UA-46257481-3', 'auto');
+			ga('send', 'pageview');
+		</script>
+
+		{* <script src="//localhost:35729/livereload.js"></script> *}
+	</head>
+
+
+	<body class="{block bodyClass}{/block}">
+
+
+
+
+	
+		<!-- ========== Mobile nav ========== -->
+		<nav class="nav-mobile" role="navigation">
+			<ul>
+				{** 
+				 * V mobilní navigaci se navíc zobrazuje odkaz na HP, protože #nav_home je skryto.
+				 *}
+				<li{if $presenter->isLinkCurrent("Homepage:default")} class="active"{/if}><a title="Přejít na úvodní stranu" n:href="Homepage:default">Úvodní strana</a></li>
+				{block #nav}
+
+				<li{if $presenter->isLinkCurrent("Homepage:festival")} class="active"{/if}><a title="iCONfestival" n:href="Homepage:festival">iCONfestival</a>
+					<ul>
+						<li><a class="scroll_to" title="Detailní program" n:href="Homepage:program#iconfestival">Detailní program iCONfestivalu</a></li>
+						{*<li><a class="scroll_to" title="iCONdev" n:href="Homepage:predprogram#icondev">iCONdev</a></li>*}
+						{*<li><a title="Vlastní program" n:href="Homepage:vlastniProgram">Vlastní program</a></li>*}
+					</ul>
+				</li>
+
+				<li{if $presenter->isLinkCurrent("Homepage:predprogram")} class="active"{/if}><a title="Program" n:href="Homepage:predprogram">Konference</a>
+					<ul>
+						<li><a class="scroll_to" title="iCONference" n:href="Homepage:predprogram#iconference">iCONference</a></li>
+						<li><a class="scroll_to" title="iCON Trénink" n:href="Homepage:predprogram#icontrenink">iCON Trénink</a></li>
+						<li><a class="scroll_to" title="iCONdev" n:href="Homepage:predprogram#icondev">iCONdev</a></li>
+						<li><a class="scroll_to" title="Detailní program" n:href="Homepage:program#iconference">Detailní program konferencí</a></li>
+						{*<li><a class="scroll_to" title="iCONdev" n:href="Homepage:predprogram#icondev">iCONdev</a></li>*}
+						{*<li><a title="Vlastní program" n:href="Homepage:vlastniProgram">Vlastní program</a></li>*}
+					</ul>
+				</li>
+				
+				 {*<li{if $presenter->isLinkCurrent("Homepage:predprogram")} class="active"{/if}><a title="Program" n:href="Homepage:predprogram">Program</a></li>*}
+				
+				 <li{if $presenter->isLinkCurrent("Homepage:recnici")} class="active"{/if}><a title="Řečníci" n:href="Homepage:recnici">Řečníci</a></li>
+
+				{* <li{if $presenter->isLinkCurrent("Homepage:program")} class="active"{/if}><a title="Program" n:href="Homepage:program">Program</a></li> *}
+			
+				{*<li{if $presenter->isLinkCurrent("Homepage:program")} class="active"{/if}><a title="Program a vstupenky" n:href="Homepage:program">Program a vstupenky</a></li>*}
+
+				<li{if $presenter->isLinkCurrent("Homepage:partneri")} class="active"{/if}><a title="Partneři" n:href="Homepage:partneri">Partneři</a></li>
+
+				<li{if $presenter->isLinkCurrent("Homepage:misto")} class="active"{/if}><a title="Místo" n:href="Homepage:misto">Místo</a></li>
+
+				{* <li{if $presenter->isLinkCurrent("Homepage:iconatrakce")} class="active"{/if}><a title="iCONatrakce" n:href="Homepage:iconAtrakce">iCONatrakce</a></li> *}
+
+				{*<li{if $presenter->isLinkCurrent("Homepage:soutezStoPrvnich") OR $presenter->isLinkCurrent("Homepage:soutezNahrajFotku")} class="active"{/if} aria-haspopup="true"><a title="Soutěže" href="#">Soutěže</a>
+					<ul>
+						<li><a title="100 prvních" n:href="Homepage:soutezStoPrvnich">100 prvních</a></li>
+						<li><a title="Nahraj fotku" n:href="Homepage:soutezNahrajFotku">Nahraj fotku</a></li>
+					</ul>
+				</li>*}
+
+				 <li{if $presenter->isLinkCurrent("Homepage:keStazeni")} class="active"{/if}><a title="Ke stažení" n:href="Homepage:keStazeni">Ke stažení</a></li>
+				
+				<li{if $presenter->isLinkCurrent("Homepage:kontakt") OR $presenter->isLinkCurrent("Homepage:kdoJsme")} class="active"{/if}><a title="Kontakt" n:href="Homepage:kontakt">Kontakt</a>
+					{* <ul>
+						<li><a title="Kdo jsme" n:href="Homepage:kdoJsme">Kdo jsme</a></li>
+					</ul> *}
+				</li>
+			{/block}
+
+				<li{if $presenter->isLinkCurrent("Homepage:en")} class="active"{/if}><a title="iCON Prague 2015" n:href="Homepage:en">English</a></li>
+			</ul>
+		</nav> <!-- .nav-mobile -->
+
+
+
+
+
+		
+		<!-- ========== Main nav ========== -->
+		<div class="container">
+			<div class="row">
+				<div class="col-nav col-12">
+
+					<nav class="nav-english" role="navigation">
+						<ul>
+							<li{if $presenter->isLinkCurrent("Homepage:en")} class="active"{/if}><a title="iCON Prague 2015" n:href="Homepage:en">English</a></li>
+						</ul>
+					</nav>
+					
+					<nav class="nav" role="navigation">
+
+
+						<span class="nav-mobile-toggle"><i class="fa fa-bars"></i></span>
+					
+
+						<ul class="nav-home" role="navigation">
+							<li>
+								<span class="lt"></span>
+								<span class="rt"></span>
+								<span class="lb"></span>
+								<span class="rb"></span>
+								<a title="Přejít na úvodní stranu" n:href="Homepage:default"><i class="fa fa-fw fa-home"></i></i></a>
+							</li>
+						</ul> <!-- .nav-home -->
+
+					
+						<nav class="nav-main" role="navigation">
+							<ul>
+								{include #nav}
+							</ul>
+							
+							<div class="clear-both"></div>
+						</nav> <!-- .nav-main -->	
+						
+						
+						<ul class="nav-social" role="navigation">
+							<li><a title="iCON na Facebooku" target="_blank" href="http://www.facebook.com/iCONPraha"><i class="fa fa-fw fa-facebook"></i></a></li>
+							<li><a title="iCON na Twitteru" target="_blank" href="http://twitter.com/iconprague"><i class="fa fa-fw fa-twitter"></i></a></li>
+							<li><a title="iCON na Tumblru" target="_blank" href="http://blog.iconprague.com/"><i class="fa fa-fw fa-tumblr"></i></a></li>
+							<li><a title="iCON na Instagramu" target="_blank" href="http://instagram.com/iconprague"><i class="fa fa-fw fa-instagram"></i></a></li>
+						</ul> <!-- .nav-social -->
+						
+						
+						<div class="clear-both"></div>
+					</nav> <!-- .nav -->
+
+				</div> <!-- .col-12 -->
+			</div> <!-- .row -->
+		</div> <!-- .container -->
+			
+		
+
+
+
+		
+		<!-- ========== Header ========== -->
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+				
+					<header class="header" role="banner">
+						{block header}{/block}
+					</header>
+				
+				</div> <!-- .col-12 -->
+			</div> <!-- .row -->
+		</div> <!-- .container -->		
+		
+
+
+
+		
+		<!-- ========== Content ========== -->
+		{block wrap}
+		<div class="container container-main" role="main">
+			<div class="row">
+		
+				{block content}{/block}
+			
+			</div> <!-- .wrap_ins -->
+		</div> <!-- .wrap -->	
+		{/block}
+
+
+
+			
+				
+		<!-- ========== Footer ========== -->
+		<div class="container">
+			<div class="row">	
+				<div class="col-12">
+
+
+					<footer class="footer" role="contentinfo">
+
+						
+						{block footer_partners}
+						{* <div class="footer-partners general">
+							<h2>iCON přináší Chytrá síť od O2</h2>
+							<a title="O2" href="http://www.o2.cz/" target="_blank"><img src="{$basePath}/assets/images/partners/o2.png" data-src2x="{$basePath}/assets/images/partners/o2@2x.png" alt="O2" width="49"></a>
+							<a title="Chytrá síť" href="http://www.o2.cz/" target="_blank"><img id="o2" src="{$basePath}/assets/images/partners/chytra_sit.png" data-src2x="{$basePath}/assets/images/partners/chytra_sit@2x.png" alt="Chytrá síť" width="201"></a>
+						</div> <!-- .footer-partners --> *}
+
+
+						<div class="footer-partners">
+							<h2>Hlavní partneři</h2>
+
+							<a title="Philips" href="http://www.philips.cz/c/fidelio/301721/cat/" target="_blank">
+								<img src="{$basePath}/assets/images/partners/philips.png" alt="Philips" width="50">
+							</a>
+
+							<a title="Zagg" href="http://www.bezobalu.eu/" target="_blank">
+								<img src="{$basePath}/assets/images/partners/zagg.png" alt="Zagg" width="100">
+							</a>
+
+							<a title="Western Digital" href="http://www.wdc.com/cz/" target="_blank">
+								<img src="{$basePath}/assets/images/partners/western-digital.png?=3" alt="Western Digital" width="90">
+							</a>
+
+							<a title="Logitech" href="http://www.logitech.cz/" target="_blank">
+								<img src="{$basePath}/assets/images/partners/logitech.png" alt="Logitech" width="129">
+							</a>
+
+							<a title="Belkin" href="http://www.belkin.cz/" target="_blank">
+								<img src="{$basePath}/assets/images/partners/belkin.png" alt="Belkin" width="129">
+							</a>
+						</div> <!-- .footer-partners -->
+						{/block}
+
+
+						{block footer_about_icon}
+						<div class="footer-about-icon">
+							<strong>Chris Griffiths, CEO ThinkBuzan, o festivalu iCON:</strong> <em>"iCON je unikátní akce v celé střední Evropě a byl pro mě skvělý zážitek se zúčastnit a přednášet. Tolik inovativních nápadů a kreativních osobností na jednom místě už jsem dlouho nezažil.”</em>
+						</div> <!-- .footer-about-icon -->
+						{/block}
+
+					
+						{block footer_2013}
+						<div class="footer-previous-icons">
+							<span><a href="http://2014.iconprague.com/">iCON 2014</a>, </span> <span><a class="icon-2013" title="Web iCON 2013" href="http://2013.iconprague.com/">iCON 2013</a></span> 2 nabité dny, 3000 návštěvníků, 50 přednášek, 40 značek
+
+							<a class="previous-icons-gallery" title="Fotogalerie" href="{$basePath}/fotogalerie-2013/">fotogalerie</a>
+						</div> <!-- .footer-previous-icons -->
+						{/block}
+
+
+
+						<div class="footer-copy">
+							<div class="row">
+								<div class="col-6">
+									Copyright &copy; 2015, iLab.
+								</div> <!-- .col-6 -->
+
+								<div class="col-6 text-right">
+									<a class="logo-query" title="Tvorba internetových stránek a on-line marketing QUERY" href="http://www.query.cz"><img src="{$basePath}/assets/images/transparent.gif" alt="Query"></a>
+									<a class="logo-eternia" title="Grafické studio Eternia" href="http://www.eternia.cz"><img src="{$basePath}/assets/images/transparent.gif" alt="Query"></a>
+								</div> <!-- .col-6 -->
+							</div> <!-- .row -->
+						</div> <!-- .footer-copy -->
+
+
+					</footer> <!-- .footer -->
+
+
+				</div> <!-- .col-12 -->
+			</div> <!-- .row -->
+		</div> <!-- .container -->
+
+
+
+
+
+		<!-- ========== JS footer ========== -->
+		<!--[if lt IE 9]><script type="text/javascript" src="{$basePath}/assets/js/css3-mediaqueries.js"></script><![endif]-->
+
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		<script>window.jQuery || document.write("<script src='/assets/js/jquery.min.js'>\x3C/script>")</script>
+
+		<script type="text/javascript" src="{$basePath}/assets/js/main.min.js?26a69489"></script>
+		{block script}{/block}
+
+
+	
+		
+	
+	</body>
+</html>

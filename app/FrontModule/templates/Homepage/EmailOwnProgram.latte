@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html lang="cs">
+	<head>
+    	<meta charset="UTF-8">
+		<title>Vlastní program - iCONPrague 2014</title>
+	</head>
+	
+	<body>
+	
+	    <h1 style="font: normal 25px Arial, sans-serif;"><img src="http://www.iconprague.com/img/logo.png" height="36" alt="iCON"> Vlastní program</h1>
+	   	
+	   	<p>NÁRODNÍ TECHNICKÁ KNIHOVNA PRAHA, Technická 6 / 2710, 160 80 Praha 6 - Dejvice</p>
+	   	
+	   	{var $date = ""}
+	   	
+	   	<table cellpadding="0" border="0">
+	    {foreach $talks as $talk}
+	    	
+	    	<tr>
+	        {if $date != date('j. n. Y', strtotime($talk->talk->starttime))}
+	            {var $date = date('j. n. Y', strtotime($talk->talk->starttime))}
+	            <td colspan="4" style="padding-top: 20px; color: #999;">{$date}</td>
+	    	</tr>
+	        
+	        
+	        <tr>
+		    	<th style="text-align: left; font-weight: bold; padding: 4px 10px 4px 0; width: 50px;">Čas</th>
+		        <th style="text-align: left; font-weight: bold; padding: 4px 10px 4px 10px;">Název přednášky</th>
+		        <th style="text-align: left; font-weight: bold; padding: 4px 10px 4px 10px;">Přednášející</th>
+		        <th style="text-align: left; font-weight: bold; padding: 4px 10px 4px 10px;">Místo</th>
+	        </tr>
+	        
+	        
+	        
+	        <tr>
+	        {/if}
+	        
+			        <td style="vertical-align: top; font-weight: bold; padding: 0 10px 0 0;">{if in_array($talk->talk->talk_type->id, $iCONtypeShowTime)}{date('H:i', strtotime($talk->talk->starttime))}{/if}</td>
+			        <td style="vertical-align: top; padding: 0 10px;">{$talk->talk->title}</td>
+			        <td style="vertical-align: top; padding: 0 10px;">{foreach $speakers[$talk->talk_id] as $speaker}{$speaker->firstname} {$speaker->lastname}{sep} / {/sep}{/foreach}</td>
+			        <td style="vertical-align: top; padding: 0 10px;">{$talk->talk->talk_type->room->name}</td>
+		        
+
+	   
+			
+			</tr>
+	    {/foreach}
+	    </table>
+
+	</body>
+</html>

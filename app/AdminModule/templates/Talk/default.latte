@@ -1,0 +1,26 @@
+{block page_title}Administrace programu{/block}
+{block content}
+    <table class='list' n:inner-foreach="$talks as $talk">
+        {first}
+            <tr>
+                <td colspan='2'>
+                    <a class='create' n:href='Talk:default'>Nový bod programu</a>
+                </td>
+            </tr>
+        {/first}
+        <tr>
+            <td>
+                <a class='icon visible{if !$talk->active} false{/if}' n:href="changeStatus! 'talk', 'active', $talk->id"></a>
+            </td>
+            <td>
+                <a{if $talk_id == $talk->id} class='current'{/if} n:href="Talk:default $talk->id">{$talk->title}<a/>
+            </td>
+        </tr>
+    </table>
+	{control formTalk}
+	<script type="text/javascript">
+		$('form table tr').each(function(){
+			$(this).attr('id', $(this).find('input, select, textarea').attr('name'));
+		});
+	</script>
+{/block}

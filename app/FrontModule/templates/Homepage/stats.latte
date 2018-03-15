@@ -1,0 +1,53 @@
+{block title}Statistiky - {include #parent}{/block}
+{block description}Jediná česká konference pro všechny příznivce zařízení a softwarových řešení společnosti Apple{/block}
+{block body_id}stats{/block}
+
+
+{block header}
+<h1 id="page_title"><a title="Přejít na úvodní stranu" n:href="Homepage:default"><img src="{$basePath}/assets/images/logo.png" data-src2x="{$basePath}/assets/images/logo@2x.png" alt="iCON"></a> Statistiky</h1>
+{/block}
+
+
+{block content}
+
+    {*<a n:href="Homepage:stats 'talks'">Nejžádanější přednášky</a><br>*}
+    {*<a n:href="Homepage:stats 'speakers'">Nejžádanější řečníci</a><br>*}
+    <a n:href="Homepage:stats 'ranking'">Hodnocení přednášek z iOS app</a><br>
+    <a n:href="Homepage:stats 'rankingS'">Hodnocení řečníků podle přednášek</a><br>
+    {*<a n:href="Homepage:stats 'subscribers'">Seznam e-mailů</a><br>*}
+
+<style>
+    table.stats td, table.stats th {
+        padding: 8px;
+        border-bottom: solid 1px #000;
+        border-collapse: collapse;
+    }
+
+    table.stats th {
+        background: #000000;
+        color: #fff;
+        text-align: center;
+    }
+</style>
+
+<h2>{$stats['title']}</h2>
+
+    <table class="stats">
+        <thead>
+            <tr>
+                <th n:foreach="$stats['captions'] as $s">{!$s}</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr n:foreach="$stats['result'] as $r">
+                <td>{$r->t}</td>
+                <td>{$r->t2}</td>
+                <td>{$r->t3}</td>
+            </tr>
+        </tbody>
+    </table>
+
+{/block}
+
+{*{block footer_partners}{/block}*}
+{block footer_2013}{/block}

@@ -1,0 +1,15 @@
+{block page_title}Správa obrázků{/block}
+{block content}
+    <div class='content'>
+        <h2>Seznam obrázků</h2>
+        {foreach $images as $i}
+            <div class="image" style="margin-bottom: 15px;">
+                <div><strong>{$i->id}</strong>. {$i->caption}</div>
+                <img src="{$basePath}/assets/images/upload/{$i->source}" alt="{$i->caption}" title="{$i->caption}" style="max-width: 450px;">
+            </div>
+        {/foreach}
+        <hr>
+        <h2>Nahrát nový obrázek</h2>
+        {control formImage}
+    </div>
+{/block}

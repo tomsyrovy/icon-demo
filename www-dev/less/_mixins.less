@@ -1,0 +1,37 @@
+/**
+ * Mixins
+ */
+
+
+ /**
+  * Mixin pro borde-radius. Použití např. .border_radius (6px, 6px, 6px, 6px);.
+  */
+ .border_radius (@lt, @rt, @rb, @lb) {
+ 	-moz-border-radius: @lt @rt @rb @lb;
+ 	-webkit-border-radius: @lt @rt @rb @lb;
+ 	-khtml-border-radius: @lt @rt @rb @lb;
+ 	border-radius: @lt @rt @rb @lb;
+ }
+
+ .fade_transition (@time: 0.1s) {
+ 	-webkit-transition: all @time linear;
+ 	-moz-transition: all @time linear;
+ 	-o-transition: all @time linear;
+ 	-ms-transition: all @time linear;
+ 	transition: all @time linear;
+ }
+ 
+ /**
+  * Mixin pro sprite s podporou zařízení s vysokým rozlišením.
+  * Použití např. ".sprite(-194px, -81px);"
+  */
+ .sprite(@x, @y) {
+ 	background: url(../images/sprite.png?v=140127) no-repeat @x @y;
+ 	@media only screen and (min-device-pixel-ratio: 2),
+ 	only screen and (-webkit-min-device-pixel-ratio: 2),
+ 	only screen and (-moz-min-device-pixel-ratio: 2),
+ 	only screen and (-o-min-device-pixel-ratio: 2/1) {
+ 	    background-image: url(../images/sprite@2x.png?v=140127);
+ 	    background-size: 340px 250px;
+ 	}
+ }

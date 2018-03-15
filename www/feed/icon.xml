@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eventlist>
+    <people>
+        <person id="24">
+            <name>Tomáš Baránek</name>
+            <company>Jan Melvil Publishing</company>
+            <position>Publicista</position>
+            <description> 
+Český publicista, nakladatel a hrdý otec dvou (možná tří) dětí. Vzhledem ke své neurotické povaze neustále objevuje způsoby, jak si svůj život zkomplikovat, aby si jej pak mohl nádherně zjednodušit či hacknout pomocí mazaných technologií. Není pouhá Apple ovce, je Apple baránek.
+Tvorba: v roce 2004 napsal sbírku erotické poezie Bez uzdičky (Host Brno), „praktickou příručku technologie lovu“ Jak sbalit ženu (Fragment) a Jak sbalit ženu 2.0 (Melvil). Je také autorem stejnojmenné divadelní hry, která se od roku 2009 hraje na prknech brněnského divadla BURANTEATR. Nyní píše prózu.</description>
+            <smallPhotoUrl>http://localhost10:8888/img/speakers/tomas_baranek_small.png</smallPhotoUrl>
+            <bigPhotoUrl>http://localhost10:8888/img/speakers/tomas_baranek.png</bigPhotoUrl>
+        </person>
+        <person id="36">
+            <name>Kuba Břečka</name>
+            <company>Play Ragtime</company>
+            <position></position>
+            <description>Vývojář s více než deseti lety zkušeností v oblasti webových, desktopových i mobilních aplikací. Od roku 2011 programuje primárně pro iOS, o čemž v poslední době i přednáší a bloguje na webu iosak.cz</description>
+            <smallPhotoUrl>http://localhost10:8888/img/speakers/kuba_brecka_small.png</smallPhotoUrl>
+            <bigPhotoUrl>http://localhost10:8888/img/speakers/kuba_brecka.png</bigPhotoUrl>
+        </person>
+        <person id="25">
+            <name>Honza Březina</name>
+            <company>Ilumio</company>
+            <position>Lektor</position>
+            <description>Fotograf, lektor, cestovatel a novinář, který je v Apple komunitě známý zejména jako spolutvůrce prvního českého videocastu Digit.cz. Apple je v podstatě jeho život. Nikoho tak nemůže překvapit, že provozuje největší české diskuzní forum pro Mac fandy Macforum.cz a zároveň funguje i jako Apple Certified Trainer.
+Kromě Apple je Honzovým druhým životním údělem fotografie. Fotí na cestách po celém světě, pořádá fotografické workshopy a komerčně se věnuje zejména portrétní fotografii. Vše dohromady pak podle jeho slov spojuje vášeň pro věc a chuť si užít život do posledního doušku. Fotografie samozřejmě upravuje na strojích s nakousnutým jablkem. </description>
+            <smallPhotoUrl>http://localhost10:8888/img/speakers/honza_brezina_small.png</smallPhotoUrl>
+            <bigPhotoUrl>http://localhost10:8888/img/speakers/honza_brezina.png</bigPhotoUrl>
+        </person>
+        <person id="44">
+            <name>Uwe Diegel</name>
+            <company>iHealth</company>
+            <position>Zakladatel</position>
+            <description>Lékařské měření všeho druhu. To je Uwe Diegel. Propagátor a aktivista propojování technologií a medicíny. Už před deseti lety založil s bratrem firmu iHealth, která se podílí na celosvětovém boji s cukrovkou. Je považován za jednoho z největších expertů na měření krevního tlaku i na výrobu přístrojů, které ho sledují. </description>
+            <smallPhotoUrl>http://localhost10:8888/img/speakers/uwe_diegel_small.png</smallPhotoUrl>
+            <bigPhotoUrl>http://localhost10:8888/img/speakers/uwe_diegel.png</bigPhotoUrl>
+        </person>
+        <person id="48">
+            <name>Tomáš Gogár</name>
+            <company>Chronicles</company>
+            <position>Spoluzakladatel</position>
+            <description> 
+Umělá inteligence, to je jeho. Spoluzakladatel Chronicles, mobilní a webový vývojář, tak trochu producent a stále ještě student na ČVUT. Zajímá se hlavně o webové technologie, big data a machine learning.</description>
+            <smallPhotoUrl>http://localhost10:8888/img/speakers/tomas_gogar_small.png</smallPhotoUrl>
+            <bigPhotoUrl>http://localhost10:8888/img/speakers/tomas_gogar.png</bigPhotoUrl>
+        </person>
+        <person id="59">
+            <name>Eva Greblerová</name>
+            <company></company>
+            <position>Učitelka</position>
+            <description>Eva poslední tři roky hledá varianty, jak studenty co nejsnáze a nejpříjemněji dovést ke znalosti angličtiny s využitím iPadu. Zároveň se podílí na vývoji jazykové aplikace a je spoluautorkou metody zapojující iPad do studia jazyků.</description>
+            <smallPhotoUrl>http://localhost10:8888/img/speakers/eva_greblerova_small.png</smallPhotoUrl>
+            <bigPhotoUrl>http://localhost10:8888/img/speakers/eva_greblerova.png</bigPhotoUrl>
+        </person>
+        <person id="52">
+            <name>Lukáš Gregor</name>
+            <company>Mítvšehotovo.cz</company>
+            <position>Šéfredaktor</position>
+            <description>Vede filmový klubu v Olomouci a Ateliér animované tvorby na Fakultě multimediálních komunikací ve Zlíně. Lektor, školitel a publicista - je šéfredaktorem serveru Mítvšehotovo.cz.</description>
+            <smallPhotoUrl>http://localhost10:8888/img/speakers/lukas_gregor_small.png</smallPhotoUrl>
+            <bigPhotoUrl>http://localhost10:8888/img/speakers/lukas_gregor.png</bigPhotoUrl>
+        </person>
+        <person id="31">
+            <name>Chris Griffiths</name>
+            <company>ThinkBuzan</company>
+            <position>Ředitel</position>
+            <description>Chris Griffiths je spoluzakladatel sdružení ThinkBuzan, spoluautor knihy Myšlenkové mapy v byznysu a autor bestselleru o manažerských technikách GRASP. Narozdíl od Tony Buzana, který se zaměřuje především na filozofii myšlenkových map, Chris se věnuje využití těchto technik v praxi a stojí taky za vývojem aplikací, které pomáhají v řízení projektů, týmů a při hledání kreativních řešení a plánů. </description>
+            <smallPhotoUrl>http://localhost10:8888/img/speakers/chris_griffiths_small.png</smallPhotoUrl>
+            <bigPhotoUrl>http://localhost10:8888/img/speakers/chris_griffiths.png</bigPhotoUrl>
+        </person>
+        <person id="32">
+            <name>Tomáš Hodboď</name>
+            <company></company>
+            <position>Freelancer</position>
+            <description>Tomáš je milovník Apple a nadšenec do sociálních sítí. Byl jedním z průkopníků využívání nových médií v prostředí veřejnoprávní České televize a podílel se na digitálních kampaních velkých značek. V tom reálném světě, tedy mimo televizi a internet, je ale zapáleným běžcem, který se nebojí tradiční sport kombinovat s novými technologiemi. </description>
+            <smallPhotoUrl>http://localhost10:8888/img/speakers/tomas_hodbod_small.png</smallPhotoUrl>
+            <bigPhotoUrl>http://localhost10:8888/img/speakers/tomas_hodbod.png</bigPhotoUrl>
+        </person>
+        <person id="30">
+            <name>Jaroslav Homolka</name>
+            <company>Gro.cz</company>
+            <position>Zakladatel</position>
+            <description>Už víc než dvacet let se intenzivně věnuje programům rozvoje osobnosti. Jeho přednáškami prošlo už kolem 18 000 lidí a pracoval na osobním rozvoji více jak 200 předních českých manažerů. Homolka vytvořil vlastní program rozvoje osobnosti Personal Sparring-Partner. Čtyři roky pracoval jako člen dozorčí rady Stavební spořitelny Wüstenrot a.s.</description>
+            <smallPhotoUrl>http://localhost10:8888/img/speakers/jaroslav_homolka_small.png</smallPhotoUrl>
+            <bigPhotoUrl>http://localhost10:8888/img/speakers/jaroslav_homolka.png</bigPhotoUrl>
+        </person>
+        <person id="27">
+            <name>Jiří Ibl</name>
+            <company>Play Ragtime</company>
+            <position>Spoluzakladatel</position>
+            <description>Dr. Maclove a dlouholetý webdesignér ve společnosti MITON CZ, který přesedlal na iOS aplikace a spoluzaložil vývojářskou komunitu Ragtime, kde pomáhá na svět malým i velkým českým aplikacím a občas si ublogne, aby se neřeklo. </description>
+            <smallPhotoUrl>http://localhost10:8888/img/speakers/jiri_ibl_small.png</smallPhotoUrl>
+            <bigPhotoUrl>http://localhost10:8888/img/speakers/jiri_ibl.png</bigPhotoUrl>
+        </person>
+        <person id="40">
+            <name>Ján Ilavský</name>
+            <company></company>
+            <position>Vývojář a hudebník</position>
+            <description>Ján Ilavský je jedným z prvních iOS vývojářů v Česku a na Slovensku. Stojí za kompletní realizací několika oceňovaných mobilních aplikací. Profesně se jako aktivní hudebník a producent pohybuje na pomezí humění a softwarového vývoje. Spolu s Vladimírem Hrinčárem založil malé nezávislé herní studio Hyperbolic Magnetism, v rámci kterého zastává roli programátora, grafika, hudebníka a game designera. Je velkým fanouškem a pravidelným účastníkem Ludum Dare a Global Game Jam.</description>
+            <smallPhotoUrl>http://localhost10:8888/img/speakers/jan_ilavsky_small.png</smallPhotoUrl>
+            <bigPhotoUrl>http://localhost10:8888/img/speakers/jan_ilavsky.png</bigPhotoUrl>
+        </person>
+        <person id="34">
+            <name>Vláďa Janeček</name>
+            <company>SuperApple</company>
+            <position>šéfredaktor</position>
+            <description>Apple poprvé potkal před patnácti lety a byla to láska na první pohled. Od roku 2009 stojí za serverem SuperApple.cz a již třetím rokem vydává také tištěný časopis SuperApple Magazín. V médiích se pohybuje už dvanáct let a ke svému osudovému webu se propracoval přes časopisy Mobility, Computer či Extra PC nebo on-line magazínů Živě.cz, Mobil.cz i MobilMania.cz. Právě brněnskou redakci vedl i jako šéfredaktor. </description>
+            <smallPhotoUrl>http://localhost10:8888/img/speakers/vlada_janecek_small.png</smallPhotoUrl>
+            <bigPhotoUrl>http://localhost10:8888/img/speakers/vlada_janecek.png</bigPhotoUrl>
+        </person>
+        <person id="37">
+            <name>Tomáš Jukin</name>
+            <company>Juicymo</company>
+            <position>Vývojář</position>
+            <description>Tomáš je spoluzakladatelem společnosti Juicymo, kde s Janou Moudrou tvoří šťavnaté aplikace nejen v iOS. Také je organizátorem setkání mobilních vývojářů For-Mobile v Praze.</description>
+            <smallPhotoUrl>http://localhost10:8888/img/speakers/tomas_jukin_small.png</smallPhotoUrl>
+            <bigPhotoUrl>http://localhost10:8888/img/speakers/tomas_jukin.png</bigPhotoUrl>
+        </person>
+        <person id="58">
+            <name>Petra Kačmarčíková Bakajsová</name>
+            <company></company>
+            <position>Učitelka</position>
+            <description>Petra je velkou fanynkou výuky angličtiny s iPadem. Více než dva roky se snaží podporovat svoje studenty a inspirovat ostatní kolegy k efektivnímu zapojení Apple zařízení do jazykového vzdělávání. </description>
+            <smallPhotoUrl>http://localhost10:8888/img/speakers/petra_kacmarcikova_bakajsova_small.png</smallPhotoUrl>
+            <bigPhotoUrl>http://localhost10:8888/img/speakers/petra_kacmarcikova_bakajsova.png</bigPhotoUrl>
+        </person>
+        <person id="51">
+            <name>Karel Klatovský</name>
+            <company>UJEP</company>
+            <position>Lektor</position>
+            <description>Lektor technologií a učitel kurzů na střední škole a na Univerzitě J.E.Purkyně, Ústí nad Labem. Autor publikací zaměřených na počítačovou a internetovou osvětu, např. 333 tipů a triků pro iPhone a iPad. Aktivní uživatel především virtuálních sportů, drží první pozici v ČR a 39. na světě v tréningu s pomocí konzole XBOX.</description>
+            <smallPhotoUrl>http://localhost10:8888/img/speakers/karel_klatovsky_small.png</smallPhotoUrl>
+            <bigPhotoUrl>http://localhost10:8888/img/speakers/karel_klatovsky.png</bigPhotoUrl>
+        </person>
+        <person id="49">
+            <name>Martin Klekner</name>
+            <company>Chronicles</company>
+            <position>Spoluzakladatel</position>
+            <description> 
+Martin je spoluzakladatel Chronicles, filmař, filmový trikař a grafik, který vystudoval Filmovou školu ve Zlíně a v současné době pracuje jako Freelancer. Jeho vášní jsou filmy, 3D i 2D grafika, malba, ale především vyprávění velkých a inspirativních příběhů.</description>
+            <smallPhotoUrl>http://localhost10:8888/img/speakers/martin_klekner_small.png</smallPhotoUrl>
+            <bigPhotoUrl>http://localhost10:8888/img/speakers/martin_klekner.png</bigPhotoUrl>
+        </person>
+        <person id="45">
+            <name>Libor Klubal</name>
+            <company>Wichterlovo gymnázium</company>
+            <position>učitel a lektor</position>
+            <description> 
+Učitel matematiky, informatiky a programování na ostravském Wichterlově gymnáziu, kde působí také jako ICT koordinátor a zástupce ředitele. Momentálně spolupracuje se školami při zavádění iPadů do prostředí českého školství a provozuje portál pro učitele iPadvetride.cz. Od roku 2011 je certifikovaným lektorem pro partnery Solution Expert in Education se zaměřením na iPady ve školství. V roce 2013 byl společností Apple oceněn titulem Apple Distinguished Educator.</description>
+            <smallPhotoUrl>http://localhost10:8888/img/speakers/libor_klubal_small.png</smallPhotoUrl>
+            <bigPhotoUrl>http://localhost10:8888/img/speakers/libor_klubal.png</bigPhotoUrl>
+        </person>
+        <person id="29">
+            <name>Petr Mára</name>
+            <company>Petrmara.com</company>
+            <position>Specialista Apple technologií</position>
+            <description>Jeden z největších českých odborníků na technologie Apple, je certifikovaným lektorem a nezávislým konzultantem technologií Apple. V poslední době věnuje svůj čas převážně školením problematiky nasazování iPadů do školní výuky ať už u nás nebo v rámci EMEA regionu. Souběžně pomáhá s integrací Apple technologií do českých firem a věnuje se školení metody GTD. </description>
+            <smallPhotoUrl>http://localhost10:8888/img/speakers/petr_mara_small.png</smallPhotoUrl>
+            <bigPhotoUrl>http://localhost10:8888/img/speakers/petr_mara.png</bigPhotoUrl>
+        </person>
+        <person id="43">
+            <name>Roman Maštalíř</name>
+            <company>Touch Art</company>
+            <position>Vývojář</position>
+            <description>Příležitostný blogger, Apple sheep, s vývojem aplikací začal při studiu v roce 2009. Nyní je společníkem Touch Art, s.r.o., jenž má na svém kontě více jak 25 aplikací pro iOS i Android. Neumí programovat, zato kolegům dělá výbornou kávu.</description>
+            <smallPhotoUrl>http://localhost10:8888/img/speakers/roman_mastalir_small.png</smallPhotoUrl>
+            <bigPhotoUrl>http://localhost10:8888/img/speakers/roman_mastalir.png</bigPhotoUrl>
+        </person>
+        <person id="41">
+            <name>Tomáš Perzl</name>
+            <company>CrazyApps</company>
+            <position>Vývojář</position>
+            <description>Tomáš Perzl je iOS vývojářem ve firmě CrazyApps, z jejichž produkce pochází třeba úspěšná aplikace TeeVee. Spolu se svými česko-slovenskými kolegy se snaží vytvářet perfektně navržené a dokonale zpracované aplikace a dobýt s nimi svět.</description>
+            <smallPhotoUrl>http://localhost10:8888/img/speakers/tomas_perzl_small.png</smallPhotoUrl>
+            <bigPhotoUrl>http://localhost10:8888/img/speakers/tomas_perzl.png</bigPhotoUrl>
+        </person>
+        <person id="53">
+            <name>Daniel Preisler</name>
+            <company></company>
+            <position>Učitel</position>
+            <description>Ředitel školy, který rád objevuje a zkouší (nejen žáky u interaktivní tabule). Prokousává se zapeklitým světem informačním technologií a vždy hledá to nejlepší, co se jen tak nezničí, nevybije a bude fungovat bez neustálých oprav. Už má totiž role ajťáka dost! Rád by konečně svůj volný čas věnoval také manželce, dceři a synovi.</description>
+            <smallPhotoUrl>http://localhost10:8888/img/speakers/daniel_preisler_small.png</smallPhotoUrl>
+            <bigPhotoUrl>http://localhost10:8888/img/speakers/daniel_preisler.png</bigPhotoUrl>
+        </person>
+        <person id="50">
+            <name>Iva Preislerová</name>
+            <company></company>
+            <position>Učitelka</position>
+            <description>Učitelka a zároveň mamka prvňáčka s iPadem ve školní tašce. Manželka ředitele školy, který rád objevuje a zkouší. Ve výuce na 1. stupni ZŠ využívá iPady, ráda vyhledává nové aplikace a těší ji, když mají u dětí úspěch.</description>
+            <smallPhotoUrl>http://localhost10:8888/img/speakers/iva_preislerova_small.png</smallPhotoUrl>
+            <bigPhotoUrl>http://localhost10:8888/img/speakers/iva_preislerova.png</bigPhotoUrl>
+        </person>
+        <person id="35">
+            <name>Daniela Rubio</name>
+            <company></company>
+            <position>konzultantka Apple</position>
+            <description>Mexičanka žijící ve Španělsku. Jedna z největších odbornic na technologii VoiceOver, díky které dokáže se svým iPadem neuvěřitelné věci. Je zároveň jedna z mála nevidomých Apple školitelek a zaměřuje se i na školení lidí s handicapem a ukazuje jim cestu do svobodného života pomocí technologií. </description>
+            <smallPhotoUrl>http://localhost10:8888/img/speakers/daniela_rubio_small.png</smallPhotoUrl>
+            <bigPhotoUrl>http://localhost10:8888/img/speakers/daniela_rubio.png</bigPhotoUrl>
+        </person>
+        <person id="57">
+            <name>Láďa Soukup</name>
+            <company>Play.cz</company>
+            <position></position>
+            <description>Kromě toho, že šéfuje IT v Play.cz se Láďa pohybuje kolem projektu Focenomobilem.cz. Jako spoluautor na něj nedá dopustit. </description>
+            <smallPhotoUrl></smallPhotoUrl>
+            <bigPhotoUrl></bigPhotoUrl>
+        </person>
+        <person id="39">
+            <name>Lukáš Stibor</name>
+            <company>Cleevio</company>
+            <position>Vývojář</position>
+            <description>Lukáš je spoluzakladatel firmy CLEEVIO, která se jednak zabývá vývojem mobilních řešení pro své klienty, ale je i globálně úspěšná se svými vlastními aplikacemi, jako jsou Spendee nebo Taasky.</description>
+            <smallPhotoUrl>http://localhost10:8888/img/speakers/lukas_stibor_small.png</smallPhotoUrl>
+            <bigPhotoUrl>http://localhost10:8888/img/speakers/lukas_stibor.png</bigPhotoUrl>
+        </person>
+        <person id="54">
+            <name>David Svoboda</name>
+            <company>Intel</company>
+            <position></position>
+            <description>Náš muž z Intelu. Připravuje tam budoucí desktopové technologie před tím, než přijdou na trh. Neustále zpochybňuje status quo a ke své práci potřebuje výzvu, jinak ho nebaví. V soukromém životě je nadšený Apple evangelista. Pokud si po půlhodinovém rozhovoru s nim nepoběžíte koupit některé z Apple zařízení, není něco v pořádku. Žije v Anglii a fandí Kometě Brno.</description>
+            <smallPhotoUrl>http://localhost10:8888/img/speakers/david_svoboda_small.png</smallPhotoUrl>
+            <bigPhotoUrl>http://localhost10:8888/img/speakers/david_svoboda.png</bigPhotoUrl>
+        </person>
+        <person id="33">
+            <name>Tomáš Tesař</name>
+            <company>iPhoneFoto.cz</company>
+            <position>Šéfredaktor</position>
+            <description>Fotograf, který se vydal na odvážnou vlastní cestu. Po mnoha letech strávených v týdeníku Reflex objevil kouzlo iPhone fotografie. Prosazuje názor, že pokud se ve 21. století stalo ve fotografii něco zásadního, potom je to právě vznik tohoto nového a ve světě stále populárnějšího žánru. Tvrdí, že mobilní fotografie bude mít vždy své odpůrce, ale i silný počet zastánců. A domnívá se, že lidé budou už brzy čím dál více a častěji &quot;komunikovat obrazem&quot;.</description>
+            <smallPhotoUrl>http://localhost10:8888/img/speakers/tomas_tesar_small.png</smallPhotoUrl>
+            <bigPhotoUrl>http://localhost10:8888/img/speakers/tomas_tesar.png</bigPhotoUrl>
+        </person>
+        <person id="46">
+            <name>Mikoláš Tuček</name>
+            <company></company>
+            <position>Hráč</position>
+            <description>Ostřílený počítačový a tabletový hráč. Notorický zkoušeč veškerých aplikací. Herní novinář, který stojí za populárním pořadem Re-Play. Mnohaletý šéfredaktor časopisů SCORE a Frag později moderoval pořady SCORE Live, Game Page, Frag Live. V současné době moderuje s Ivou Frühlingovou pořad věnovaný mobilním aplikacím Applikace. Sparťan. </description>
+            <smallPhotoUrl>http://localhost10:8888/img/speakers/mikulas_tucek_small.png</smallPhotoUrl>
+            <bigPhotoUrl>http://localhost10:8888/img/speakers/mikulas_tucek.png</bigPhotoUrl>
+        </person>
+        <person id="42">
+            <name>Jiří Urbášek</name>
+            <company></company>
+            <position>Vývojář</position>
+            <description>Tvorbě iPhone/iPad aplikací se jako freelancer věnuje od roku 2009. Spolupracoval s předními českými vývojáři, má za sebou několik aplikací na zakázku pro české i zahraniční klenty. Poslední dobou se snaží prorazit s vývojem vlastních aplikací. S kamarády se podílí na tvorbě úspěšné aplikace Instashare, nedávno zaznamenal úspěch na českém AppStore s aplikací Expires.</description>
+            <smallPhotoUrl>http://localhost10:8888/img/speakers/jiri_urbasek_small.png</smallPhotoUrl>
+            <bigPhotoUrl>http://localhost10:8888/img/speakers/jiri_urbasek.png</bigPhotoUrl>
+        </person>
+        <person id="38">
+            <name>Martin Wenisch</name>
+            <company>Play Ragtime</company>
+            <position>Vývojář</position>
+            <description>Digitální masochista a nativní iOS vývojář ze spolku Play Ragtime. Má spousty nápadů, zajímá se o využití iPadů ve školství a snaží se zlepšit svět.</description>
+            <smallPhotoUrl>http://localhost10:8888/img/speakers/martin_wenisch_small.png</smallPhotoUrl>
+            <bigPhotoUrl>http://localhost10:8888/img/speakers/martin_wenisch.png</bigPhotoUrl>
+        </person>
+        <person id="28">
+            <name>Patrick Zandl</name>
+            <company>Energomonitor</company>
+            <position>spoluzakladatel</position>
+            <description>Nedávno se přiznal, že je v zajetí nástrojů a výběr té pravé aplikace mu leckdy zabere víc času než práce samotná. Jak se tomu vyhnout? Český publicista a zakladatel serveru Mobil.cz. Dlouhodobě se pohybuje kolem telekomunikací a digitálních médií. Na přelomu tisíciletí stál spolu s Ondřejem Neffem a Ivo Lukačovičem u zrodu protestní akce Internet proti monopolu. Jeho poslední mediální štace byla pozice šéfredaktora serveru Lupa.cz. Předloni mu vyšla kniha Apple: cesta k mobilům. Momentálně se specializuje na chytré využití technologií v energetice. </description>
+            <smallPhotoUrl>http://localhost10:8888/img/speakers/patrick_zandl_small.png</smallPhotoUrl>
+            <bigPhotoUrl>http://localhost10:8888/img/speakers/patrick_zandl.png</bigPhotoUrl>
+        </person>
+    </people>
+    <rooms>
+    </rooms>
+    <events>
+    </events>
+</eventlist>

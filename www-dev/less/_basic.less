@@ -1,0 +1,79 @@
+/**
+ * Basic core elements, classes and ids
+ */
+
+
+html,
+body {
+   //height: 100%;
+}
+
+body {
+	/**
+	 * Ošetření pro špatné zobrazovaní opakovaného pozadí
+	 * při menších rozlišení než wrap při fixním layout
+	 * (typicky v patičkách).
+	 */
+	/* min-width: 960px; */
+	//font-size: 14px; // Výchozí velikost fontu je zde proto, aby neproblikával font před načtením externího fontu.
+	
+	/**
+	 * Nastavení velikosti fontu pro iOS webkit a MS prohlížeče
+	 * (typicky pro správné velikosti při responsivním layoutu).
+	 */
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	/*@-ms-viewport { width: device-width; }*/
+}
+
+.wrap {
+	text-align: center;
+
+	.wrap_ins {
+		margin: 0 auto;
+		padding: 0 15px;
+		text-align: left;
+		max-width: 930px;
+	}
+}
+
+.flash {
+	margin-bottom: 31px;
+	border-radius: 6px;
+	text-align: center;
+	padding: 10px;
+	font-weight: bold;
+	color: #fff;
+
+	&.success {
+		background: @green;
+	}
+
+	&.unsuccess{
+		background: @pink;
+	}
+}
+
+a {
+	color: #000;
+
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+.btn_black {
+	.border_radius (6px, 6px, 6px, 6px);
+    color: #fff;
+    text-decoration: none;
+    background: #000;
+    display: inline-block;
+    padding: 15px;
+    margin: 20px 0;
+    .fade_transition;
+ 
+    &:hover {
+		background: @green;
+		.fade_transition;
+    }
+}

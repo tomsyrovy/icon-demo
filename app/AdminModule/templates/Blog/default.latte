@@ -1,0 +1,40 @@
+{block page_title}Správa článků{/block}
+{block content}
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-4">
+
+                <table class='list' n:inner-foreach="$articles as $a">
+                    {first}
+                        <tr>
+                            <td colspan='2'>
+                                <a class='create' n:href='Blog:default'>Nový článek</a>
+                            </td>
+                        </tr>
+                    {/first}
+                    <tr>
+                        <td>
+                            <a class='icon visible{if !$a->active} false{/if}' n:href="changeStatus! 'blog', 'active', $a->id"></a>
+                        </td>
+                        <td>
+                            <a{if $article_id == $a->id} class='current'{/if} n:href="Blog:default $a->id">{if $a->title}{$a->title}{else}&hellip;bez názvu&hellip;{/if} ({$a->type})<a/>
+                        </td>
+                    </tr>
+                </table>
+
+            </div>
+
+			<div class="col-8">
+                {if $article->nice_url}<p><strong>Přátelské url:</strong> #{$article->nice_url}</p>{/if}
+
+				{control formArticle}
+			</div> <!-- .col-8 -->
+
+		</div> <!-- .row -->
+
+	</div> <!-- .container -->
+
+{/block}

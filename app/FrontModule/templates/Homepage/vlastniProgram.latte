@@ -1,0 +1,100 @@
+{block title}Vlastní program - {include #parent}{/block}
+{block description}Jediná česká konference pro všechny příznivce zařízení a softwarových řešení společnosti Apple{/block}
+{block body_id}vlastni_program{/block}
+
+
+{block header}
+<h1 id="page_title"><a title="Přejít na úvodní stranu" n:href="Homepage:default"><img src="{$basePath}/assets/images/logo.png" data-src2x="{$basePath}/assets/images/logo@2x.png" alt="iCON"></a> Vlastní program</h1>
+{/block}
+
+
+{block content}
+	<h2>Vyberte si přednášky, které vás zajímají nejvíce.</h2>
+	
+	<h3>Sestavte si svůj vlastní program a pošlete na e-mail.</h3>
+
+    <div n:foreach="$flashes as $flash" class="flash {$flash->type}">{$flash->message}</div>
+
+    {var $form => $control['formVlastniProgram']}
+    {form formVlastniProgram}
+	<div id="blocks">
+
+        {foreach $talk_types as $talk_type}
+            <div id="{$talk_type->class}" class="block">
+                <header>
+                    <h1>{$talk_type->title}</h1>
+                    {!$talk_type->date}
+                </header>
+
+                <?php
+                    $d = "";
+                    $first = FALSE;
+                ?>
+
+                {foreach $talks[$talk_type->id] as $talk}
+
+                    <?php
+                        if($d != date("Y-n-j", strtotime($talk->starttime))){
+                        $d = date("Y-n-j", strtotime($talk->starttime));
+                        $first = TRUE;
+                    }
+                    ?>
+
+                    {if $first AND $talk_type->id == 1}
+                        <article class="date_program">
+                            <div class="block_time">
+                                <span></span>
+                                <span class="dot"></span>
+                            </div> <!-- .time -->
+
+                            <header>
+                                <div class="label">
+                                    {$talk->starttime|date:"j. n. Y"}
+                                </div>
+
+                                <div class="clear-both"></div>
+                            </header>
+                            <div class="clear-both"></div>
+                        </article>
+                    {/if}
+
+                    <article{last} class="last"{/last}>
+                        <div class="block_time">
+                            <span>{if in_array($talk_type->id, $iCONtypeShowTime)}{$talk->starttime|date:"H:i"}{/if}</span>
+                            <span class="dot"></span>
+                        </div> <!-- .time -->
+
+                        <header>
+                            <div class="checkbox">
+                                {$form[$talk_type->id][$talk->id]->control}
+                            </div> <!-- .checkbox -->
+
+                            <div class="label">
+                                {$form[$talk_type->id][$talk->id]->label} <span class="speaker">{foreach $speakers[$talk->id] as $speaker}<a title="{$speaker->firstname} {$speaker->lastname}" n:href="Homepage:recnici $speaker->nice_url">{$speaker->firstname} {$speaker->lastname}</a>{sep} / {/sep}{/foreach}</span>
+                            </div>
+
+                            <div class="clear-both"></div>
+                        </header>
+                        <div class="clear-both"></div>
+                    </article>
+                    {var $first = FALSE}
+                {/foreach}
+
+            </div><!-- .block -->
+            {if $iterator->getCounter()%3 == 0}<div class="clear-both"></div>{/if}
+        {/foreach}
+
+
+	</div> <!-- #blocks -->
+	
+	
+	<p class="align_ctr">{$form["email"]->control}</p>
+	
+	<p class="align_ctr">{$form["submit"]->control}</p>
+    {/form}
+	
+{/block}
+
+
+{*{block footer_partners}{/block}*}
+{block footer_2013}{/block}

@@ -1,0 +1,19 @@
+{
+	"name": "iCONPrague2015",
+	"version": "0.0.1",
+	"author": "Jiří Šebek, Tomáš Syrový (www.query.cz)",
+	"dependencies": {
+		"css-framework" : "https://jirsbek@bitbucket.org/jirsbek/css-framework.git",
+		"jquery": "1.11.2",
+		"css3-mediaqueries-js": "latest",
+		"html5shiv": "latest",
+		"retina.js": "latest",
+		"normalize.css": "latest",
+		"fastclick" : "latest",
+		"unveil" : "latest",
+		"fancybox": "latest",
+		"swiper": "latest",
+		"fontawesome": "latest",
+		"tinymce-dist": "latest"
+	}
+}

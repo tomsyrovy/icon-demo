@@ -1,0 +1,104 @@
+/**
+ * Místo
+ */
+
+
+.misto {
+	.container-main {
+		min-height: 500px;
+		position: relative;
+		background: url(../../images/map.png) no-repeat right bottom;
+		@media only screen and (min-device-pixel-ratio: 2),
+		only screen and (-webkit-min-device-pixel-ratio: 2),
+		only screen and (-moz-min-device-pixel-ratio: 2),
+		only screen and (-o-min-device-pixel-ratio: 2/1) {
+		    background-image: url(../../images/map@2x.png);
+		    background-size: 576px 540px;
+		}
+	}
+
+	.map-ruler {
+		position: absolute;
+		right: 40px;
+		bottom: 550px;
+		text-align: center;
+		width: 92px;
+		font-size: 16px;
+		color: #bfbfbf;
+		font-weight: bold;
+
+		img {
+			width: 92px;
+			height: 19px;
+			margin-top: -20px;
+			.sprite (-65px, 0);
+		}
+	}
+
+	.vcard {
+		margin-top: 100px;
+	}
+
+	.org {
+		font-size: 16px;
+		text-transform: uppercase;
+		margin: 0 0 30px;
+		font-weight: bold;
+
+		a {
+			text-decoration: none;
+		}
+
+		strong {
+			font-family: HeliaCore-Black, Arial, sans-serif;
+			font-size: 80px;
+			display: block;
+			margin-bottom: 20px;
+		}
+	}
+
+	.button {
+		display: inline-block;
+		font-size: 18px;
+		//padding: 10px;
+	}
+
+	.parking-info {
+		width: 340px;
+	}
+}
+
+
+
+
+
+
+
+@media only screen and (max-width: 840px) {
+	.misto {
+		.container-main {
+			background: none;
+		}
+
+		.org {
+			strong {
+				display: inline;
+			}
+			br {
+				display: none;
+			}
+		}
+		
+		.button {
+			display: block;
+		}
+		
+		.map-ruler {
+			display: none;
+		}
+		
+		.parking-info {
+			width: auto;
+		}
+	}
+}

@@ -1,0 +1,167 @@
+{block title}Detailní program - {include #parent}{/block}
+{block description}Jediná česká konference pro všechny příznivce zařízení a softwarových řešení společnosti Apple{/block}
+{block bodyClass}program{/block}
+
+
+{block header}
+	<h1 class="page-title">
+		<a title="Přejít na úvodní stranu" n:href="Homepage:default">
+			<img src="{$basePath}/assets/images/logo.png" alt="iCON"></a> Program
+	</h1>
+{/block}
+
+
+{block wrap}
+	{*<div class="wrap">*}
+		{*<div class="wrap_ins">*}
+	{**}
+			{*<!-- ========== CONTENT ========== -->*}
+			{*<div id="content">*}
+
+				{*<div id="blocks" n:inner-foreach="$blocks as $b">*}
+					{*<article class="{$b->color}">*}
+						{*<div class="color_box"><span></span></div>*}
+						{*<h1><a class="scroll_to" title="{$b->title}" href="#{$b->class}">{$b->title}</a></h1>*}
+						{*<p class="date"><a class="scroll_to" title="{$b->title}" href="#{$b->class}">{if $b->id == 1}sobota 22. 3. 2013,<br>neděle 23. 3. 2013{else}{!$b->date}{/if}</a></p>*}
+					{*</article>*}
+				{*</div>*}
+
+			{*</div> <!-- #content -->*}
+
+		{*</div> <!-- .wrap_ins -->*}
+	{*</div> <!-- .wrap -->	*}
+
+
+	{foreach $blocks as $block}
+		<div class="container container-block" id="{$block->class}">
+			<div class="row">
+
+				<div class="col-3 col-left">
+					{if $block->id == 12 OR $block->id == 11}
+						<div class="block-date">
+							<p class="block-date-content">
+								<span class="block-date-day">sobota a neděle</span>
+								<br>25. - 26. 4. 2015
+							</p>
+						</div>
+					{else}
+						<div class="block-date">
+							<p class="block-date-content">
+								<span class="block-date-day"><?php $d = explode(" ", $block->date); echo $d[0]; ?></span><br>{$block->date_uni|date:"j. n. Y"}
+							</p>
+						</div>
+					{/if}
+
+					<h1 class="block-title">{$block->title}</h1>
+
+					{*{if $block->id != 1}*}
+						{*<a class="btn_black" title="Koupit vstupenky" href="{$ticketsLink}" target="_blank">Koupit vstupenky<br>na tento blok {if in_array($block->id, $iCONtypeSoldOut)}<em class="sold_out">Vyprodáno</em>{/if}</a>*}
+					{*{/if}*}
+
+					<p>{!$block->program_description}</p>
+
+					{if $block->id != 11}
+						<div class="tickets-link">
+							{!$ticketsLink}
+						</div> <!-- .tickets-link -->
+					{/if}
+
+				</div> <!-- .col-3 -->
+
+
+				<div class="col-9 col-right">
+					<?php
+						$d = "";
+						$first = FALSE;
+					?>
+
+					{foreach $talks[$block->id] as $talk}
+
+						<?php
+							if($d != date("Y-n-j", strtotime($talk->starttime))){
+								$d = date("Y-n-j", strtotime($talk->starttime));
+								$first = TRUE;
+							}
+						?>
+
+						{if $first AND ($block->id == 12 OR $block->id == 11)}
+							<h1 class="seminars-group-date">{$talk->starttime|date:"j. n. Y"}</h1>
+						{/if}
+
+						<article class="seminar seminar_{$block->id}_{$talk->starttime|date:"Y-m-d"}{if $first} first{/if}{if $iterator->isLast()} last{/if}" id="{$talk->title|webalize}">
+
+							<div class="seminar-time">
+								<span class="seminar-time-digits">
+									{if in_array($block->id, $iCONtypeShowTime)}{$talk->starttime|date:"G.i"}{/if}
+								</span>
+								<span class="seminar-time-dot">
+							</div> <!-- .seminar-time -->
+
+
+							<div class="seminar-content">
+								<div class="row">
+									<div class="col-2">
+										<div class="seminar-avatar{if $countSpeakers[$talk->id] > 1} avatarSlideshow{/if}">
+											{foreach $speakers[$talk->id] as $speaker}
+												{if $speaker->image}<img src="{$basePath}/assets/images/speakers/{$speaker->image}" alt="{$speaker->firstname} {$speaker->lastname}" data-no-retina>{/if}
+											{/foreach}
+										</div> <!-- .avatar -->
+									</div> <!-- .col-2 -->
+
+									<div class="col-10">
+										<div class="seminar-info">
+											<h2 class="seminar-speaker">{foreach $speakers2[$talk->id] as $speaker}<a n:href="Homepage:recnici $speaker->nice_url">{$speaker->firstname} {$speaker->lastname}</a>{sep} / {/sep}{/foreach}</h2>
+											<h1 class="seminar-title">{$talk->title}</h1>
+											<p>{!$talk->perex}</p>
+											{if $talk->description}
+												<a class="seminar-more" title="Více o přednášce">Více o přednášce</a>
+
+												<div class="seminar-more-info">
+													<p>{!$talk->description}</p>
+												</div> <!-- .more_info -->
+											{/if}
+											{*{if $talk->ticket_link}*}
+												{*<a class="ticket" title="Registrace a vstupenky" href="{$talk->ticket_url}" target="_blank">{$talk->ticket_link}</a>*}
+											{*{/if}*}
+										</div> <!-- .info -->
+									</div> <!-- .col-10 -->
+								</div> <!-- .row -->
+							</div> <!-- .seminar-content -->
+
+						</article> <!-- .seminar -->
+						{var $first = FALSE}
+
+					{/foreach}
+				</div> <!-- .col-9 -->
+
+			</div> <!-- .row -->
+		</div> <!-- .container -->
+	{/foreach}
+
+{block script}
+	<script type="text/javascript">
+		/*$(document).ready(function(){
+			$('.avatarSlideshow').fadeSlideShow({
+				width: 70,
+				height: 70
+			});
+
+			$(".seminar-more").click(function(){
+				var el = $(this).parent().find(".seminar-more-info");
+				if($(el).css("display") == "none"){
+					$(el).slideDown();
+					$(this).text("Méně o přednášce");
+				}else{
+					$(el).slideUp();
+					$(this).text("Více o přednášce");
+				}
+			});
+		});*/
+	</script>
+{/block}
+
+{/block}
+
+
+{block footer_partners}{/block}
+{block footer_2013}{/block}

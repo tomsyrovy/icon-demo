@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eventlist>
+    <people>
+        <person id="999">
+            <name>Alena Anasová</name>
+            <company>Merkur a.s.</company>
+            <position>HR Manager</position>
+            <description>Alena se zabývala personalistikou od svých 13 let. Po dokončení vysoké školy pracovala ve firmě Microsoft a poté i v IBM.</description>
+            <smallPhotoUrl>http://iconprague.cz/img/speakers/alena_anasova.png</smallPhotoUrl>
+            <bigPhotoUrl>http://iconprague.cz/img/speakers/alena_anasova_small.png</bigPhotoUrl>
+        </person>
+        <person id="998">
+            <name>Bořek Borůvka</name>
+            <company>Saturn.net</company>
+            <position>Event Manager</position>
+            <description>Již od svých 10 let byl pověstný svými šílenými večírky. </description>
+            <smallPhotoUrl>http://iconprague.cz/img/speakers/borek_boruvka.png</smallPhotoUrl>
+            <bigPhotoUrl>http://iconprague.cz/img/speakers/borek_boruvka_small.png</bigPhotoUrl>
+        </person>
+        <person id="997">
+            <name>Cyril Celerový</name>
+            <company>Jupiter</company>
+            <position>Apple milovník</position>
+            <description>Populizátor Apple zařízení nejen v České republice ale i na Slovensku.</description>
+            <smallPhotoUrl>http://iconprague.cz/img/speakers/cyril_celerovy.png</smallPhotoUrl>
+            <bigPhotoUrl>http://iconprague.cz/img/speakers/cyril_celerovy_small.png</bigPhotoUrl>
+        </person>
+    </people>
+    <events>
+        <event id="999">
+            <person id="999" />
+            <icon_part>iCONference</icon_part>
+            <block>Mind Mapping</block>
+            <startTime>2014-03-15 09:00</startTime>
+            <endTime>2014-03-15 09:15</endTime>
+            <title>Slavnostní zahájení a vyhlášení soutěže Prvních 100</title>
+            <shortDescription>Krátký popisek.</shortDescription>
+            <description>Slavnostní zahájení patronem konference.</description>
+        </event>
+        <event id="998">
+            <person id="998" />
+            <person id="997" />
+            <icon_part>iCONmánie</icon_part>
+            <block></block>
+            <startTime>2014-03-15 09:20</startTime>
+            <endTime>2014-03-15 09:40</endTime>
+            <title>Žhavé Apple novinky, které hýbou světem</title>
+            <shortDescription>Krátký popisek.</shortDescription>
+            <description>Představení těch nej věciček, které Apple nabízí.</description>
+        </event>
+    </events>
+</eventlist>
